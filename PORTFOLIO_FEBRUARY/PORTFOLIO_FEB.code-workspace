@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "PORTFOLIO_FEB",
+			"path": ".."
+		},
+		{
+			"name": "assets",
+			"path": "../../assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PORTFOLIO_FEB"
+	}
+}
