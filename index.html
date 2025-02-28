@@ -6,6 +6,17 @@
     <title>Luca Caruccio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a0cbdc87e9.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="index.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ieAiBu1ZhZ11fuRyy",
+      });
+   })();
+</script>
 </head>
 <body>
     <section id="landing-page">
@@ -28,14 +39,14 @@
                     link__hover-effect--black">
                     Projects</a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class=
                     "nav__link--anchor 
                     link__hover-effect 
                     link__hover-effect--black">
                     Contact</a>
                 </li>
-                <li class="nav__link click">
+                <li class="nav__link click" onclick="toggleContrast()">
                     <a href="#" class=
                     "nav__link--anchor 
                     link__hover-effect 
@@ -54,7 +65,7 @@
                 strong passion for building scaleable applications and resources 
                 to achieve great user experiences.
 <br>
-                Heres a bit more <b class="green">about me. </b>
+                Heres a bit more <b class="green click" onclick="toggleModal()">about me. </b>
             </p>
             <div class="social__list">
                 <a href="https://www.linkedin.com/in/lucacaruccio/" target="_blank" class="social__link click">
@@ -72,7 +83,7 @@
             </div>
         </div>
     </header>
-    <button class="mail__button click">
+    <button class="mail__button click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
     </button>
     <a href="#projects" class="scroll">
@@ -83,20 +94,84 @@
     <div class="modal">
         <div class="modal__half modal__about">
             <h3 class="modal__title modal__title--about">Here's a bit about me</h3>
-            <h4 class="modal__subtitle modal__subtitle--about"></h4>
-            <p class="modal__para">I'm an Analyst and Software Engineer
+            <h4 class="modal__subtitle modal__subtitle--about">Frontend Software Engineer & Data Analyst</h4>
+            <p class="modal__para">I'm an <span class="green">Analyst </span>and <span class="green">Software Engineer</span>
             <br>
             I enjoy being challenged in every sense, 
             facing issues head on in creative ways, 
             and to never stop learning!
         </p>
         <div class="modal__languages">
-            <figure>
-                <img src="" alt="" srcset="">
+            <figure class="modal__language">
+                <img class="modal__language--img" src="./Javascript_Icon.png" alt="" srcset="">
+                <span class="language__name">JAVASCRIPT</span>
             </figure>
+            <figure class="modal__language">
+                <img class="modal__language--img" src="./Javascript_Icon.png" alt="" srcset="">
+                <span class="language__name">JAVASCRIPT</span>
+            </figure>
+            <figure class="modal__language">
+                <img class="modal__language--img" src="./Javascript_Icon.png" alt="" srcset="">
+                <span class="language__name">JAVASCRIPT</span>
+            </figure>
+            <figure class="modal__language">
+                <img class="modal__language--img" src="./Javascript_Icon.png" alt="" srcset="">
+                <span class="language__name">JAVASCRIPT</span>
+            </figure>
+            <figure class="modal__language">
+                <img class="modal__language--img" src="./Javascript_Icon.png" alt="" srcset="">
+                <span class="language__name">JAVASCRIPT</span>
+            </figure>
+            <figure class="modal__language">
+                <img class="modal__language--img" src="./Javascript_Icon.png" alt="" srcset="">
+                <span class="language__name">JAVASCRIPT</span>
+            
+            </figure>
+            <figure class="modal__language">
+                <img class="modal__language--img" src="./Javascript_Icon.png" alt="" srcset="">
+                <span class="language__name">JAVASCRIPT</span>
+            </figure>
+            <figure class="modal__language">
+                <img class="modal__language--img" src="./Javascript_Icon.png" alt="" srcset="">
+                <span class="language__name">JAVASCRIPT</span>
+            </figure>
+            
         </div>
+        
         </div>
-        <div class="modal__half modal__contact">Let's get in touch</div>
+        
+        <div class="modal__half modal__contact">
+            <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+        <h3 class="modal__title modal__title--contact">
+            Let's get in touch!
+        </h3>
+        <h3 class="modal__subtitle modal__subtitle--contact">
+            I'm currently open to new oppurtunities
+        </h3>
+        <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+                <label class="form__item--label">Name</label>
+                <input class= "input"name="username" type="text" required></input>
+            </div>
+            <div class="form__item">
+                <label class="form__item--label">Email</label>
+                <input class= "input"name="email" type="text" required></input>
+            </div>
+            <div class="form__item">
+                <label class="form__item--label">Message</label>
+                <textarea class= "input"name="message" type="text" required></textarea>
+            </div>
+        <button id="contact__submit" class="form__submit">Send a Message</button>
+        </button>
+        </form>
+<div class="modal__overlay modal__overlay--loading">
+    <i id = "spinnyboi" class="fa-solid fa-spinner"></i>
+</div>
+<div class="modal__overlay modal__overlay--success">
+    Thanks for the Message! Looking forward to speaking with you!
+</div>
+    </div>
+   
     </div>
 </section>
 <section id="projects">
