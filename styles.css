@@ -317,7 +317,7 @@ nav, .scroll, .header {
 }
 
 .modal__about {
-    background-color: #d9dbb9;
+    background-color: #d4fbc2;
     transform: translateX(-110%);
     
 }
@@ -509,6 +509,11 @@ nav {
     text-align: center;
     font-size: 48px;
     margin-bottom: 60px;
+}
+
+.p__description {
+    font-size: 24px;
+    text-align: center;
 }
 
 .project {

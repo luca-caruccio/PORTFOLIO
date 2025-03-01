@@ -3,10 +3,6 @@
 		{
 			"name": "PORTFOLIO_FEB",
 			"path": ".."
-		},
-		{
-			"name": "assets",
-			"path": "../../assets"
 		}
 	],
 	"settings": {
